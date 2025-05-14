@@ -219,19 +219,19 @@ span{
     }
     21%,
     40%{
-        content: "Web Designer";
+        content: "UI / UX Designer";
     }
     41%,
     60%{
-        content: "UI / UX Designer";
+        content: "Full Stack Development";
     }
     61%,
     80%{
-        content: "Web Developer";
+        content: "Web Development";
     }
     81%,
     100%{
-        content: "Software Tester";
+        content: "Mobile Development";
     }
 }
 @keyframes typing{
@@ -354,7 +354,7 @@ span{
     background-color: var(--bg-color);
     width: 50px;
 }
-.services{
+/* .services{
     background: var(--bg-color);
     color: black;
 }
@@ -386,22 +386,78 @@ span{
     display: flex;
     flex-direction: column;
     text-align: left;
-    max-height: 150px;
+    max-height: 200px;
     justify-content: left;
     align-items: baseline;
     padding: 3rem 3rem;
 }
 .service-info h4{
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 800;
     line-height: 2;
 }
 .service-info p{
-    font-size: 1.6rem;
+    font-size: 1.1rem;
     font-weight: 600;
     max-height: 100px;
     line-height: 1.7;
     margin: auto;
+} */
+ .services {
+    background: var(--bg-color);
+    color: black;
+}
+
+.services h2 {
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    gap: 2.5rem;
+}
+
+.service-box {
+    background-color: var(--main-color);
+    border-radius: 3rem;
+    border: 5px solid transparent;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    height: auto; /* make box height dynamic */
+    padding: 2rem;
+}
+
+.service-box:hover {
+    background: white;
+    color: black;
+    border: 5px solid var(--main-color);
+    transform: scale(1.03);
+}
+
+.service-box .service-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    height: 100%;
+}
+
+.service-info h4 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    line-height: 2;
+}
+
+.service-info p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.7;
+    margin-top: 1rem;
 }
 
 .testimonials{
@@ -601,8 +657,12 @@ span{
 @media(max-width:895px){
     #menu-icon{
         display: block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        z-index: 1001;
     }
-    .navbar{
+    .navbar {
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;
@@ -613,15 +673,15 @@ span{
         border-bottom-left-radius: 2rem;
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
-        display: none;
+        z-index: 1000;
     }
-    .navbar .active{
+    .navbar.active{
         display: block;
     }
-    .navbar a{
+    .navbar a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 2rem 0;
         color: white;
     }
     .home{
@@ -645,7 +705,7 @@ span{
     .services h2{
         margin-bottom: 3rem;
     }
-    .services-container{
-        grid-template-columns: repeat(1, 1rf);
+    .services-container {
+        grid-template-columns: repeat(1, 1fr); /* FIXED: 1rf → 1fr */
     }
 }

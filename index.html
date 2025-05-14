@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Font style -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
 </head>
@@ -98,31 +100,31 @@
             <div class="service-box">
                 <div class="service-info">
                     <h4>UI Design</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga animi ducimus optio esse, sit beatae quia error. Quam saepe ipsam sequi! Optio eos, accusantium vero qui voluptas aliquam vel et.</p>
-                </div>
-            </div>
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Front End</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga animi ducimus optio esse, sit beatae quia error. Quam saepe ipsam sequi! Optio eos, accusantium vero qui voluptas aliquam vel et.</p>
+                    <p>I craft clean, modern, and user-focused interfaces that turn ideas into engaging digital experiences. My approach to UI Design combines aesthetic appeal with usability, ensuring every layout is both visually striking and functionally intuitive. From wireframes to polished designs, I focus on clarity, consistency, and accessibility to help users interact effortlessly with your product.</p>
                 </div>
             </div>
             <div class="service-box">
                 <div class="service-info">
                     <h4>Full Stack Development</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga animi ducimus optio esse, sit beatae quia error. Quam saepe ipsam sequi! Optio eos, accusantium vero qui voluptas aliquam vel et.</p>
+                    <p>As a Full Stack Developer, I specialize in building complete, end-to-end web applications—from crafting responsive front-end interfaces to developing robust back-end systems and APIs. I work across the entire development stack to deliver scalable, secure, and user-friendly digital solutions. Whether it's creating a modern web experience or optimizing server-side performance, I bring both technical expertise and creative problem-solving to every project.</p>
                 </div>
             </div>
             <div class="service-box">
                 <div class="service-info">
                     <h4>Web Development</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga animi ducimus optio esse, sit beatae quia error. Quam saepe ipsam sequi! Optio eos, accusantium vero qui voluptas aliquam vel et.</p>
+                    <p>I build dynamic, responsive, and high-performing websites tailored to meet the needs of businesses and users alike. With a strong foundation in modern web technologies, I focus on creating seamless digital experiences that are not only visually engaging but also optimized for speed, accessibility, and scalability. Whether it's a simple landing page or a complex web application, I deliver clean, efficient code and reliable functionality.</p>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-info">
+                    <h4>Mobile Development</h4>
+                    <p>I specialize in Android mobile development, creating fast, reliable, and user-friendly applications tailored for the Android ecosystem. With a deep understanding of Android UI/UX guidelines, performance optimization, and native development tools, I build apps that run smoothly across a wide range of devices. From concept to deployment, I focus on delivering mobile solutions that combine functionality with a seamless user experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- <section class="testimonials" id="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="testimonials-box">
             <div class="heading">Testimonials</div>
             <div class="wrapper">
@@ -164,28 +166,29 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="">
-            <div class="input-grup">
+        <form id="contact-form">
+            <div class="input-group">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="tel" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject">
                 </div>
             </div>
             <div class="input-group-2">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Massage"></textarea>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
             </div>
         </form>
     </section>
+
 
     <footer class="footer">
         <div class="social">
@@ -205,7 +208,7 @@
                 <a href="#">About Me</a>
             </li>
             <li>
-                <a href="contact">Comtact</a>
+                <a href="contact">Contact</a>
             </li>
             <li>
                 <a href="testimonials">Testimonials</a>
